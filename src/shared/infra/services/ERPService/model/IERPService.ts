@@ -1,3 +1,5 @@
+import IInsertOrderDTO from '../dtos/IinsertOrderDTO';
+
 export default interface IERPService {
-  insertOrder(): Promise<void>;
+  insertOrder(data: IInsertOrderDTO): Promise<void>;
 }

@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import opportunitiesRoutes from '@opportunities/infra/routes/opportunities.routes';
+import opportunitiesRoutes from '@order/infra/routes/opportunities.routes';
 
 const appRoutes = Router();
 
-appRoutes.use('/opportunities', opportunitiesRoutes);
+appRoutes.use('/orders', opportunitiesRoutes);
 
 export default appRoutes;
