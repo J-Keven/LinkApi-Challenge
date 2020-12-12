@@ -20,10 +20,11 @@
 
 
 <p align="center">
-  <a href="#fire-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#fire-como-usar">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#fire-como-usar">Como Usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-como-contribuir">Como Contribuir</a>&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/linkApi-challenge/#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/linkApi-challenge/#-como-usar">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/linkApi-challenge/#-como-usar">Como Usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/linkApi-challenge/#-rotas">Rotas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/J-Keven/linkApi-challenge/#-como-contribuir">Como Contribuir</a>&nbsp;&nbsp;&nbsp;
   <!-- <a href="#memo-licença">Licença</a> -->
 </p>
 
@@ -66,17 +67,20 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias e ferramentas:
 3. Adicione as chaves de acesso no ``.env``
   Para que a aplicação se conect com a Api do Pipedrive, Bling e com o mongodb, é necessário que você adicione as keys de acesso no ``.env`` que você criou.
 
-  - ApiKey do Pipedrive e do Bling
+  - ApiKey do Pipedrive e do Bling:
+  
     Para obter a ApiKey do Pipedrive e do Bling voce deve acessar as duas plataformas e copiar a sua secretKey de ambas a plataformas e colar como valor das variáveis abientes contidas no ``.env``
 
   + Usando mongodb Atlas: 
+
   caso deseje usar o mongodb Atlas, vá ate o seu cluster, clique em connect, depois em Connect your application, em DRIVER escolha o Node.js, em VERSION escolha a 3.6 or Later e click em COPY. Cole a url na variável ambiente ``MONGO_URL_CONNECTION`` contina no seu ``.env``
   A url sera nesse formato:
     ```js
       mongodb+srv://seUsername:<password>@cluster0.vvpyt. mongodb.net/<dbname>?retryWrites=true&w=majority
     ```
     Em ``<pessword>`` coloque sua senha e em ``<dbname>`` coloque o nome que dejesa dar ao seu banco.
-- Usando o mongo localmente: 
+- Usando o mongo localmente:
+
   caso deseje usar um banco mongodb que esteja execultado na sua máquina a url será neste formato 
   A url sera nesse formato:
   ```js
