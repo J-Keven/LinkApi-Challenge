@@ -64,20 +64,24 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias e ferramentas:
 
   - Crie um arquivo ``.env`` na raiz do rojeto.
   - Copie o conteúdo do arquivo [.env.example](freelasApp-api/.env.example) e cole no seu arquivo ``.env``
-3. Adicione as chaves de acesso no ``.env``
-  Para que a aplicação se conect com a Api do Pipedrive, Bling e com o mongodb, é necessário que você adicione as keys de acesso no ``.env`` que você criou.
+
+3. Adicione as chaves de acesso no ``.env``:
+
+    Para que a aplicação se conect com a Api do Pipedrive, Bling e com o mongodb, é necessário que você adicione as keys de acesso no ``.env`` que você criou.
 
   - ApiKey do Pipedrive e do Bling:
-  
+
     Para obter a ApiKey do Pipedrive e do Bling voce deve acessar as duas plataformas e copiar a sua secretKey de ambas a plataformas e colar como valor das variáveis abientes contidas no ``.env``
 
   + Usando mongodb Atlas: 
 
-  caso deseje usar o mongodb Atlas, vá ate o seu cluster, clique em connect, depois em Connect your application, em DRIVER escolha o Node.js, em VERSION escolha a 3.6 or Later e click em COPY. Cole a url na variável ambiente ``MONGO_URL_CONNECTION`` contina no seu ``.env``
-  A url sera nesse formato:
-    ```js
-      mongodb+srv://seUsername:<password>@cluster0.vvpyt. mongodb.net/<dbname>?retryWrites=true&w=majority
-    ```
+    caso deseje usar o mongodb Atlas, vá ate o seu cluster, clique em connect, depois em Connect your application, em DRIVER escolha o Node.js, em VERSION escolha a 3.6 or Later e click em COPY. Cole a url na variável ambiente ``MONGO_URL_CONNECTION`` contina no seu ``.env``
+    A url sera nesse formato:
+
+      ```js
+        mongodb+srv://seUsername:<password>@cluster0.vvpyt. mongodb.net/<dbname>?retryWrites=true&w=majority
+      ```
+
     Em ``<pessword>`` coloque sua senha e em ``<dbname>`` coloque o nome que dejesa dar ao seu banco.
 - Usando o mongo localmente:
 
@@ -98,7 +102,7 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias e ferramentas:
 
       MONGO_URL_CONNECTION=Url
   ```
-3. Instale as depedências:
+4. Instale as depedências:
 ```sh
   # Instale as dependências
   $ yarn
