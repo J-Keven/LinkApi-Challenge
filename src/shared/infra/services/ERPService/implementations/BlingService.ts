@@ -25,7 +25,6 @@ class BlingService implements IERPService {
     try {
       const {
         code,
-        date,
         description,
         products_qtd,
         unit_value,

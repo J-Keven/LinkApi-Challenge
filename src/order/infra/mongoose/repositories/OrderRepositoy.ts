@@ -4,16 +4,18 @@ import IOrderDTO from '@order/dtos/IOrderDTO';
 import Order from '../schemas/Order';
 
 class OrderRepository implements IOrderRepository {
-  private orderRepository;
-
-  constructor() {
-    this.orderRepository = Order;
-  }
-
   async findAll(): Promise<IOrderDTO[]> {
-    const orders = this.orderRepository.find();
+    const orders = Order.find();
 
     return orders;
+  }
+
+  async findByCode(code: number): Promise<IOrderDTO | null> {
+    const order = Order.findOne({
+      code,
+    });
+
+    return order;
   }
 
   async create(data: ICreateDTO): Promise<IOrderDTO> {
@@ -25,12 +27,12 @@ class OrderRepository implements IOrderRepository {
       description,
       products_qtd,
       salesman_name,
-      unit_value,
+      orderValue,
     } = data;
 
     const order = await Order.create({
       code,
-      unit_value,
+      orderValue,
       date,
       products_qtd,
       cliente_name,
@@ -38,20 +40,6 @@ class OrderRepository implements IOrderRepository {
       salesman_name,
       description,
     });
-    return order;
-  }
-
-  async findByDay(day: Date): Promise<IOrderDTO | null> {
-    const order = await this.orderRepository.findOne({
-      date_colection: day,
-    });
-
-    return order;
-  }
-
-  async save(order: IOrderDTO): Promise<IOrderDTO> {
-    order.save();
-
     return order;
   }
 }

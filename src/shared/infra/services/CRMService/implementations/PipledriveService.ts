@@ -1,7 +1,7 @@
 import AppError from '@shared/error/AppError';
 import axios, { AxiosInstance } from 'axios';
 import ICRMService from '../model/ICRMService';
-import IOrderDTO from '../dtos/IDealDTO';
+import IDealDTO from '../dtos/IDealDTO';
 
 class PipedriveService implements ICRMService {
   private ApiClient: AxiosInstance;
@@ -13,7 +13,7 @@ class PipedriveService implements ICRMService {
     });
   }
 
-  async getOrder(): Promise<IOrderDTO[] | undefined> {
+  async getDeals(status: string): Promise<IDealDTO[] | undefined> {
     const pipedriveKey = process.env.PIPEDRIVE_API_KEY;
     if (!pipedriveKey) {
       throw new AppError(
@@ -24,7 +24,7 @@ class PipedriveService implements ICRMService {
 
     try {
       const { data } = await this.ApiClient.get(
-        `deals?status=open&start=0&api_token=${pipedriveKey}`,
+        `deals?status=${status}&start=0&api_token=${pipedriveKey}`,
       );
       return data.data;
     } catch (error) {

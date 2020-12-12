@@ -1,7 +1,7 @@
 import { Document } from 'mongoose';
 
 export default interface IOrderDTO extends Document {
-  unit_value: number;
+  orderValue: number;
   code: number;
   date: Date;
   products_qtd: number;

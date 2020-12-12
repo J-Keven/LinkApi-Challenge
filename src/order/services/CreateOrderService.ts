@@ -14,23 +14,27 @@ class CreateOrderService {
       code,
       cliente_email,
       cliente_name,
-      unit_value,
+      orderValue,
       salesman_name,
       products_qtd,
       description,
       date,
     } = data;
 
-    const order = await this.orderRepository.create({
-      code,
-      cliente_email,
-      cliente_name,
-      date,
-      description,
-      products_qtd,
-      salesman_name,
-      unit_value,
-    });
+    let order = await this.orderRepository.findByCode(code);
+
+    if (!order) {
+      order = await this.orderRepository.create({
+        code,
+        cliente_email,
+        cliente_name,
+        date,
+        description,
+        products_qtd,
+        salesman_name,
+        orderValue,
+      });
+    }
 
     return order;
   }

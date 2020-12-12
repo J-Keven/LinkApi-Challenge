@@ -2,10 +2,10 @@ import mongoose from 'mongoose';
 import IOrderDTO from '@order/dtos/IOrderDTO';
 
 const Orderschema = new mongoose.Schema({
-  unit_value: Number,
+  orderValue: Number,
   code: {
-    unique: true,
     type: Number,
+    unique: true,
   },
   date: Date,
   products_qtd: Number,
@@ -13,6 +13,14 @@ const Orderschema = new mongoose.Schema({
   cliente_email: String,
   salesman_name: String,
   description: String,
+  created_at: {
+    type: Date,
+    default: new Date(),
+  },
+  updated_at: {
+    type: Date,
+    default: new Date(),
+  },
 });
 
 export default mongoose.model<IOrderDTO>('Order', Orderschema);

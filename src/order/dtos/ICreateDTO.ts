@@ -1,6 +1,6 @@
-export default interface ICreate {
+export default interface ICreateDTO {
   code: number;
-  unit_value: number;
+  orderValue: number;
   date: Date;
   products_qtd: number;
   cliente_name: string;
