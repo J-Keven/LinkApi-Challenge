@@ -7,7 +7,11 @@ export default (): void => {
     throw new Error('database connection failure');
   }
   mongoose
-    .connect(mongoUri, { useUnifiedTopology: true, useNewUrlParser: true })
+    .connect(mongoUri, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+      useCreateIndex: true,
+    })
     .then(() => {
       console.log('database connected');
     });

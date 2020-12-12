@@ -1,4 +1,5 @@
 export default interface IDealDTO {
+  id: number;
   title: string;
   value: number;
   update_time: Date;

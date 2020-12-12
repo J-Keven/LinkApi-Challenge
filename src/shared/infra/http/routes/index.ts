@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import opportunitiesRoutes from '@order/infra/routes/opportunities.routes';
+import opportunitiesRoutes from '@order/infra/routes/order.routes';
 
 const appRoutes = Router();
 

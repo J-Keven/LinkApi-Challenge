@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios';
 import AppError from '@shared/error/AppError';
 import IERPService from '../model/IERPService';
-import IInsertOrderDTO from '../dtos/IinsertOrderDTO';
+import IInsertOrderDTO from '../dtos/IInsertOrderDTO';
 import xmlTemplate from '../../utils/xmlTemplate';
 
 class BlingService implements IERPService {
