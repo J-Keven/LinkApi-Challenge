@@ -116,6 +116,9 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias e ferramentas:
 
 Assim que as messagens `` 🚀 server started in http://localhost:3333`` e ``database connected`` aparecerem em seu terminal, você ja pode fazer suas requisições.
 ## ⚡ Rotas
+
+como a aplicação estrá executando em ambiente local, utiliza o endereço ``http://localhost:3333`` como baseUrl.
+
 A aplicação possie uma única.
 - orders
 Aceita requisiçõe do tipo GET e do tipo POST
